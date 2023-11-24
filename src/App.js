@@ -1,12 +1,15 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+//import components
 import Header from "./components/Header";
 import Feed from "./components/Feed";
 import SearchResult from "./components/SearchResult";
 import VideoDetails from "./components/VideoDetails";
 
+//import context
 import { AppContext } from "./context/contextApi";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 const App = () => {
   return (

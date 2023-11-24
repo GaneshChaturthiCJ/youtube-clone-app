@@ -2,6 +2,7 @@ import React, { createContext, useState, useEffect } from "react";
 
 import { fetchDataFromApi } from "../utils/api";
 
+//create context to make data globally available
 export const Context = createContext();
 
 export const AppContext = (props) => {

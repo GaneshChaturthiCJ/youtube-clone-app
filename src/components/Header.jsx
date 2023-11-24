@@ -14,6 +14,7 @@ import { Context } from "../context/contextApi";
 import Loader from "../shared/loader";
 
 const Header = () => {
+  //user types in the search bar
   const [searchQuery, setSearchQuery] = useState("");
 
   const { loading, mobileMenu, setMobileMenu } = useContext(Context);
@@ -34,14 +35,18 @@ const Header = () => {
     setMobileMenu(!mobileMenu);
   };
 
+  //to get the current page location
   const { pathname } = useLocation();
+  //to get exact page name
   const pageName = pathname?.split("/")?.filter(Boolean)?.[0];
 
   return (
     <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-black">
+      {/* loader symbol on top to indicate the loading symbol */}
       {loading && <Loader />}
 
       <div className="flex h-5 items-center">
+        {/*If pageName is not "video" the only display the below div */}
         {pageName !== "video" && (
           <div
             className="flex md:hidden md:mr-6 cursor-pointer items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]"
