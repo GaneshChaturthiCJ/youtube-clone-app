@@ -7,6 +7,7 @@ import VideoCard from "./VideoCard";
 const Feed = () => {
   const { loading, searchResults } = useContext(Context);
 
+  //when we are in feed page remove this class
   useEffect(() => {
     document.getElementById("root").classList.remove("custom-h");
   }, []);
